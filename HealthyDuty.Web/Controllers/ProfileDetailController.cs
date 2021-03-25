@@ -23,7 +23,7 @@ namespace HealthyDuty.Web.Controllers
             _profileService = profileService;
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_PROFILEDETAIL_BATCHEDIT)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_PROFILEDETAIL_BATCHEDIT)]
         public ActionResult BatchEdit()
         {
             BatchEditViewModel model = new BatchEditViewModel();
@@ -34,7 +34,7 @@ namespace HealthyDuty.Web.Controllers
         }
 
         [HttpPost]
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_PROFILEDETAIL_BATCHEDIT)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_PROFILEDETAIL_BATCHEDIT)]
         public ActionResult BatchEdit(BatchEditViewModel model)
         {
             if (!ModelState.IsValid)

@@ -22,7 +22,7 @@ namespace HealthyDuty.Web.Controllers
         }
 
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_LIST)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_LIST)]
         public ActionResult List()
         {
             ListViewModel model = new ListViewModel();
@@ -49,7 +49,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_LIST)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_LIST)]
         [HttpPost]
         public ActionResult List(ListViewModel model)
         {
@@ -88,14 +88,14 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_ADD)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_ADD)]
         public ActionResult Add()
         {
             Models.BloodGroup.AddViewModel model = new AddViewModel();
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_ADD)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_ADD)]
         [HttpPost]
         public ActionResult Add(Models.BloodGroup.AddViewModel model)
         {
@@ -118,7 +118,7 @@ namespace HealthyDuty.Web.Controllers
             }
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_EDIT)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_EDIT)]
         public ActionResult Edit(int id)
         {
             Models.BloodGroup.AddViewModel model = new AddViewModel();
@@ -141,7 +141,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_EDIT)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_BLOODGROUP_EDIT)]
         [HttpPost]
         public ActionResult Edit(Models.BloodGroup.AddViewModel model)
         {

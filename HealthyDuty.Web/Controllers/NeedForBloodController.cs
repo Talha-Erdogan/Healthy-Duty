@@ -25,7 +25,7 @@ namespace HealthyDuty.Web.Controllers
         }
 
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_LISTFORCURRENTUSER)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_LISTFORCURRENTUSER)]
         public ActionResult ListForCurrentUser()
         {
             ListForCurrentUserViewModel model = new ListForCurrentUserViewModel();
@@ -58,7 +58,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_LISTFORCURRENTUSER)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_LISTFORCURRENTUSER)]
         [HttpPost]
         public ActionResult ListForCurrentUser(ListForCurrentUserViewModel model)
         {
@@ -101,7 +101,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_ADDFORCURRENTUSER)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_ADDFORCURRENTUSER)]
         public ActionResult AddForCurrentUser()
         {
             Models.NeedForBlood.AddForCurrentUserViewModel model = new AddForCurrentUserViewModel();
@@ -109,7 +109,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_ADDFORCURRENTUSER)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_ADDFORCURRENTUSER)]
         [HttpPost]
         public ActionResult AddForCurrentUser(Models.NeedForBlood.AddForCurrentUserViewModel model)
         {
@@ -137,7 +137,7 @@ namespace HealthyDuty.Web.Controllers
             }
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_EDITFORCURRENTUSER)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_EDITFORCURRENTUSER)]
         public ActionResult EditForCurrentUser(int id)
         {
             Models.NeedForBlood.AddForCurrentUserViewModel model = new AddForCurrentUserViewModel();
@@ -162,7 +162,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_EDITFORCURRENTUSER)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_NEEDFORBLOOD_EDITFORCURRENTUSER)]
         [HttpPost]
         public ActionResult EditForCurrentUser(Models.NeedForBlood.AddForCurrentUserViewModel model)
         {

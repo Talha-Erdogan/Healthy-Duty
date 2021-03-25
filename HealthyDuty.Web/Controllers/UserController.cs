@@ -28,7 +28,7 @@ namespace HealthyDuty.Web.Controllers
         }
 
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_LIST)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_LIST)]
         public ActionResult List()
         {
             ListViewModel model = new ListViewModel();
@@ -61,7 +61,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_LIST)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_LIST)]
         [HttpPost]
         public ActionResult List(ListViewModel model)
         {
@@ -106,7 +106,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_ADD)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_ADD)]
         public ActionResult Add()
         {
             Models.User.AddViewModel model = new AddViewModel();
@@ -116,7 +116,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_ADD)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_ADD)]
         [HttpPost]
         public ActionResult Add(Models.User.AddViewModel model)
         {
@@ -163,7 +163,7 @@ namespace HealthyDuty.Web.Controllers
             }
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_EDIT)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_EDIT)]
         public ActionResult Edit(int id)
         {
             Models.User.AddViewModel model = new AddViewModel();
@@ -202,7 +202,7 @@ namespace HealthyDuty.Web.Controllers
             return View(model);
         }
 
-        //[AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_EDIT)]
+        [AppAuthorizeFilter(AuthCodeStatic.PAGE_USER_EDIT)]
         [HttpPost]
         public ActionResult Edit(Models.User.AddViewModel model)
         {
