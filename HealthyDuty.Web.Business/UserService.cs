@@ -122,6 +122,17 @@ namespace HealthyDuty.Web.Business
 
             return result;
         }
+        public User GetByUserName(string userName)
+        {
+            User result = null;
+
+            using (AppDBContext dbContext = new AppDBContext(_config))
+            {
+                result = dbContext.User.Where(a => a.UserName == userName).AsNoTracking().SingleOrDefault();
+            }
+
+            return result;
+        }
 
         public int Add(User record)
         {

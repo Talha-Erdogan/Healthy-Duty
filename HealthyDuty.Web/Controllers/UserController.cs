@@ -147,6 +147,12 @@ namespace HealthyDuty.Web.Controllers
 
             try
             {
+                var existUser = _userService.GetByUserName(model.UserName);
+                if (existUser != null)
+                {
+                    ViewBag.ErrorMessage = "Exist User.";
+                    return View(model);
+                }
                 _userService.Add(user);
                 return RedirectToAction(nameof(UserController.List));
             }
@@ -235,6 +241,15 @@ namespace HealthyDuty.Web.Controllers
 
                 if (model.SubmitType == "Edit")
                 {
+                    var existUser = _userService.GetByUserName(model.UserName);
+                    if (existUser != null)
+                    {
+                        if (existUser.Id != model.Id)
+                        {
+                            ViewBag.ErrorMessage = "Exist User.";
+                            return View(model);
+                        }
+                    }
                     _userService.Update(user);
                 }
                 return RedirectToAction(nameof(UserController.List));
