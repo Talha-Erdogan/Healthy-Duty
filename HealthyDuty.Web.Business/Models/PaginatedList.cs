@@ -35,5 +35,10 @@ namespace HealthyDuty.Web.Business.Models
 
             Items = items;
         }
+
+        public PaginatedList()
+        {
+
+        }
     }
 }
